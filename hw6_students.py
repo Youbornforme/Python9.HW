@@ -1,9 +1,14 @@
-ufc_stud = {'McGregor':[8,8,10], 'Tyson':[10,9,10], 'Adesanya':[9,7,9], 'Nurmagomedov':[9,8,9]}
-
-for stud in ufc_stud.values():
-    print(sum(stud)/len(stud))
-if ufc_stud
+studs = {}
+n = int(input("Количество студентов: "))
+s = 0
+for i in range(n):
+   sname = input(str(i+1) + "-й студент: ")
+   point = int(input("Балл: "))
+   studs[sname] = point
+   s += point
  
-
-
-                                        sorry dont understand
+avrg = s / n
+print("\nСредний балл: %.0f. Студенты с баллом выше среднего:" % avrg)
+for i in studs:
+    if studs[i] > avrg:
+       print(i)
